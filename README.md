@@ -7,7 +7,7 @@ The SSL/TLS part was adapted from  https://gist.github.com/chrisgillis/10888032
 
 This is a very simple email module you can use to send html based emails.  
 
-I include an example email template that is used with the test.
+I include an example html email template you can adapt for your site for email signups.
 
 Please note, in order to use Mailgun, you will need the keys you were issued by Mailgun and 
 
@@ -16,4 +16,14 @@ You will need to verify your domain before you can send test emails to their sys
 the api.  If you do try to use the api with just a sandbox testing domain they issue, you will get an error like
 
 Rejected: '....' Sandbox subdomains are for test purposes only. Please add your own domain or add the address to authorized recipients in Account Settings.: 
+
+To run the test for mailgun, you need to set a couple of environment variables
+
+export FROMEMAIL=<email sender>
+export TOEMAIL=<email recipient>
+export MG_DOMAIN=<mailgun domain mg.yourdomain.com etc>
+export MG_API_KEY=<private api key starts with key-...>
+export MG_PUBLIC_API_KEY=<public api key starts with pubkey-....>
+export MG_URL=https://api.mailgun.net/v3
+
 

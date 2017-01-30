@@ -19,12 +19,6 @@ import (
 
 const crlf = "\r\n"
 
-var (
-	apikey    = os.Getenv("HOME")
-	publickey = os.Getenv("USER")
-	domain    = os.Getenv("GOPATH")
-)
-
 type EmailMessage struct {
 	// the full HTML content to be sent
 	HTML string `json:"html,omitempty"`
