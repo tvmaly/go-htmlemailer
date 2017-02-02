@@ -26,7 +26,7 @@ func TestSendMailGun(t *testing.T) {
 
 	var emailbody bytes.Buffer
 
-	emaildata := map[string]string{"domain": "foo", "email": "bar"}
+	emaildata := map[string]string{"host": "https://bestfoodnearme.com", "token": "12345"}
 
 	err := emailTemplate.Execute(&emailbody, emaildata)
 
